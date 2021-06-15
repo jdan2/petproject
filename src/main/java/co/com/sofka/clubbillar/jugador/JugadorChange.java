@@ -1,7 +1,6 @@
 package co.com.sofka.clubbillar.jugador;
 
 import co.com.sofka.clubbillar.jugador.events.HistoricoAgregado;
-import co.com.sofka.clubbillar.jugador.events.JugadorActualizado;
 import co.com.sofka.clubbillar.jugador.events.JugadorCreado;
 import co.com.sofka.clubbillar.jugador.events.MembresiaAsignada;
 import co.com.sofka.domain.generic.EventChange;
