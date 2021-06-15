@@ -9,18 +9,6 @@ k
 ;src/main/java/co/com/sofka/clubbillar/mesa/Reservacion.java,2/4/243e0983bb3b9164707f6a9a83320064462a61bd
 g
 7src/main/java/co/com/sofka/clubbillar/mesa/Consumo.java,7/7/778800bc8831d8854dce0dde49f7a3777ad84256
-p
-@src/main/java/co/com/sofka/clubbillar/jugador/values/Nombre.java,3/b/3b1a64b0ead1645e2b11d29468b337d85452f39e
-x
-Hsrc/main/java/co/com/sofka/clubbillar/jugador/values/NumeroPartidas.java,d/3/d38afebf1fce1262f071f79d0b8a031d4e5ec9b1
-q
-Asrc/main/java/co/com/sofka/clubbillar/jugador/values/Puntaje.java,a/a/aa6c49178bff3eb9e8aa3164f541f738c9fce791
-s
-Csrc/main/java/co/com/sofka/clubbillar/jugador/values/PuntajeId.java,6/0/60a73975a1002bf3ac13211eda1cbae5edd69471
-u
-Esrc/main/java/co/com/sofka/clubbillar/jugador/values/Vencimiento.java,c/c/cc5db447ec4a15cf4a233c7cc1f71c6308b28481
-n
->src/main/java/co/com/sofka/clubbillar/jugador/values/Tipo.java,9/8/98272c27eb98182759cbeac3655360326593f678
 d
 4src/main/java/co/com/sofka/clubbillar/mesa/Mesa.java,6/7/67c6db172da8b5c7e19d3d14230c9019cf006ec3
 l
@@ -39,8 +27,6 @@ m
 =src/main/java/co/com/sofka/clubbillar/mesa/values/MesaId.java,2/6/26874a850f424e003fe0e36ee8b1358cfef6c2f4
 m
 =src/main/java/co/com/sofka/clubbillar/mesa/values/Precio.java,5/2/5229af476552a7dc11b70a14a90d23799eca9373
-t
-Dsrc/main/java/co/com/sofka/clubbillar/mesa/values/ReservacionId.java,d/d/dd951825cf96376fa5b6b4abaa921a1d633d93eb
 o
 ?src/main/java/co/com/sofka/clubbillar/partida/values/Email.java,f/a/fa99ecf88757abc495d198e45ebaf9e0af39fd16
 v
