@@ -1,6 +1,6 @@
 package co.com.sofka.clubbillar.jugador;
 
-import co.com.sofka.clubbillar.jugador.events.JugadorCreado;
+import co.com.sofka.clubbillar.jugador.events.*;
 import co.com.sofka.clubbillar.jugador.values.*;
 import co.com.sofka.domain.generic.AggregateEvent;
 
@@ -14,7 +14,7 @@ public class Jugador extends AggregateEvent<JugadorId> {
     protected Edad edad;
     protected Email email;
     protected Puntaje puntaje;
-    protected Set<Membresia> membresia;
+    protected MembresiaId membresiaId;
     protected List<Historico> historico;
 
     public Jugador(JugadorId entityId, Nombre nombre, Edad edad, Email email, Puntaje puntaje) {
@@ -22,8 +22,9 @@ public class Jugador extends AggregateEvent<JugadorId> {
         appendChange(new JugadorCreado(nombre, edad, email, puntaje)).apply();
     }
 
-    public void actualizarJugador(Jugador jugador){
-        appendChange(new JugadorActualizado(nombre, edad, email, puntaje)).apply();
+    private Jugador(JugadorId entityId){
+        super(entityId);
+        subscribe(new JugadorChange(this));
     }
 
     public void  agregarHistorico(HistoricoId entityId, Racha racha, NumeroPartidas numeroPartidas){
@@ -33,17 +34,12 @@ public class Jugador extends AggregateEvent<JugadorId> {
         appendChange(new HistoricoAgregado( entityId, racha, numeroPartidas));
     }
 
+
     public void asignarMembresia(MembresiaId membresiaId){
         appendChange(new MembresiaAsignada(membresiaId)).apply();
 
     }
 
-    public Optional<Membresia> getMembresiaPorId(MembresiaId membresiaId){
-        return membresia()
-                .stream()
-                .filter(membresia -> membresia.identity().equals(entityId))
-                .findFirst();
-    }
 
     public Nombre nombre() {
         return nombre;
@@ -61,8 +57,8 @@ public class Jugador extends AggregateEvent<JugadorId> {
         return puntaje;
     }
 
-    public Set<Membresia> membresia() {
-        return membresia;
+    public MembresiaId membresiaId() {
+        return membresiaId;
     }
 
     public List<Historico> historico() {
